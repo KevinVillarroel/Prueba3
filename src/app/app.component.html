@@ -1,0 +1,17 @@
+<h1> Tour de heroes de marvel </h1>
+<!--Parte 5: Paso 7: Se coloca el elemento <nav> y dentro de el se ancla que, al hacer clic, se activa la nagevacion al heroescomponent
+    -->
+<nav>
+    <!--Parte 5: Paso 16: Se agrega <a routerLink="/dashboard">Dashboard</a> para que muestre un apartado con los superheroes segundo, tercero, cuarto y quinto -->
+    <a routerLink="/dashboard">Dashboard</a>
+    <br>
+    <br>
+    <a routerLink="/heroes">Heroes</a>
+    
+  </nav>
+<!--Parte 1: Paso 5: Se remplaza el
+<app-heroes></app-heroes> en app.component.html-->
+<!--Parte 5: Paso 6: Se remplaza el app-heroes por el router-outlet-->
+<router-outlet></router-outlet>
+<!--Parte 4: Paso 15: se crea el component messages y se añade dentro del html de la app-->
+<app-messages></app-messages>

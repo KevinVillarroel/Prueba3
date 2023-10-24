@@ -1,0 +1,9 @@
+<!--Parte 4: Paso 20: Se enlanza al messageService-->
+<div *ngIf="messageService.messages.length">
+
+    <h2>Mensajes</h2>
+    <button class="clear"
+            (click)="messageService.clear()">Limpiar</button>
+    <div *ngFor='let message of messageService.messages'> {{message}} </div>
+  
+  </div>

@@ -1,0 +1,34 @@
+<!--Parte 3: Paso 1: Se agrega el componente hero-datil con el comando ng generate component hero-detail en el Angular-Tour-Of-Heroes
+y se le coloca
+<div *ngIf="hero">
+
+  <h2>{{hero.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{hero.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="hero.name" placeholder="name"/>
+    </label>
+  </div>
+
+</div>
+para poder editar el heroe y se borra del heroes.component.html-->
+
+<div *ngIf="hero">
+  <h2>Detalles de {{hero.name | uppercase}}</h2>
+  
+  <div><span>Id: </span>{{hero.id}}</div>
+  
+  <div>
+    <label>Nombre:
+      <input [(ngModel)]="hero.name" placeholder="Nombre"/>
+    </label>
+  </div>
+
+  <div><span>Poder: </span>{{hero.Poder}}</div>
+
+
+  <div><span>Pelicula: </span>{{hero.Pelicula}}</div>
+  <!--Parte 5: paso 25: Se agrega el boton goback-->
+  <button (click)="goBack()">volver atras</button>
+</div>
+

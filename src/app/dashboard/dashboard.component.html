@@ -1,0 +1,25 @@
+<!--Parte 5: Paso 8: Se genera el componente Dashboard en el Angular-Tour-Of-Heroes con el comando ng generate component dashboard y se coloca esto
+<h3>Top Heroes</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let hero of heroes" class="col-1-4">
+    <div class="module hero">
+      <h4>{{hero.name}}</h4>
+    </div>
+  </a>
+</div>
+en el dashboard.component.html-->
+<!-- Parte 5: Paso 18: Se coloca routerLink="/detail/{{hero.id}}">
+Los enlaces de héroe DashboardComponent no hacen nada en este momento.
+Ahora que el enrutador tiene una ruta a HeroDetailComponent, 
+corrige los enlaces del héroe del dashboard para navegar a través de la ruta parametrizada del dashboard. -->
+<h3>Top De Heroes</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let hero of heroes" class="col-1-4"
+  routerLink="/detail/{{hero.id}}">
+    <div class="module hero">
+      <h4>{{hero.name}}</h4>
+    </div>
+  </a>
+</div>
+
+

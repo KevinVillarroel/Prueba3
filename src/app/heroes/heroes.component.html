@@ -1,0 +1,90 @@
+<!--Parte 1: Paso 3: Se coloca {{hero}} en heroes.component.html-->
+<!-- titulo mis heroes-->
+<!--Parte 3 Paso 7: Asi deberia quedar el html
+<h2>My Heroes</h2>
+
+<ul class="heroes">
+  <li *ngFor="let hero of heroes"
+    [class.selected]="hero === selectedHero"
+    (click)="onSelect(hero)">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
+
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+con todas las agraciones y lo que se debe borrar.-->
+<h2>Mis Heroes</h2>
+<!-- Lista de heroes usando un bucle *ngFor -->
+<ul class="heroes">
+  <!--Parte 1: Paso 7: Se coloca 
+  <h2>{{hero.name}} Details</h2>
+<div><span>id: </span>{{hero.id}}</div>
+<div><span>name: </span>{{hero.name}}</div>
+en el heroes.component.html-->
+<!--Parte 1: Paso 8: Se coloca
+<h2>{{hero.name | uppercase}} Details</h2>
+para que se muestre en mayuscula el nombre en el heroes.component.html-->
+<!--Parte 1: Paso 9: Se coloca
+<div>
+  <label>name:
+    <input [(ngModel)]="hero.name" placeholder="name"/>
+  </label>
+</div>
+en el heroes.component.html para que muestre los detalles del heroes como el nombre Pero sale un error.-->
+<!--Parte 2: Paso 3: Se coloca
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li>
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
+para el diseño de heroes.component.html-->
+<!--Parte 2: Paso 4: Se coloca
+<li *ngFor="let hero of heroes">
+  para itear la lista de heroes-->
+  <!--Parte 2: Paso 6: Se coloca
+  <li *ngFor="let hero of heroes" (click)="onSelect(hero)">
+    para agregar el evento click y se ejecuto la expresion onSelect(hero)-->
+    <!--Parte 2: Paso 8: Se coloca
+    <h2>{{selectedHero.name | uppercase}} Details</h2>
+<div><span>id: </span>{{selectedHero.id}}</div>
+<div>
+  <label>name:
+    <input [(ngModel)]="selectedHero.name" placeholder="name"/>
+  </label>
+</div>
+para agregar una sesion de detalle pero nos dara error de nombre de undefined-->
+<!--Parte 2: Paso 9: Se coloca
+<div *ngIf="selectedHero">
+
+  <h2>{{selectedHero.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{selectedHero.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="selectedHero.name" placeholder="name"/>
+    </label>
+  </div>
+
+</div>
+usamos el *nglf para ocultar detalles vacios-->
+<!--Parte 2: Paso 10: Se coloca
+[class.selected]="hero === selectedHero"
+agrega el css en la clase-->
+<!--Parte 2: Paso 11: Se agrega
+<li *ngFor="let hero of heroes"
+  [class.selected]="hero === selectedHero"
+  (click)="onSelect(hero)">
+  <span class="badge">{{hero.id}}</span> {{hero.name}}
+</li>
+Para agregar la lista de heroes.-->
+<!--Parte 5: Paso 19: Se quita el onselect que estaba en el <li y se remplaza por el routerlink -->
+  <li *ngFor="let hero of heroe" 
+  title="{{hero.Poder}} , {{hero.Pelicula}}" 
+   routerLink="/detail/{{hero.id}}">
+  <span class="badge">{{hero.id}}</span> {{hero.name}}
+
+</li>
+
+</ul>
+<!--Parte 3: Paso 3 y Paso 6: Se coloca <app-hero-detail [hero]="selectedHero"></app-hero-detail> para vincular el hero-datil con este archivos.-->
+<!-- Componente personalizado "app-hero-detail" que recibe el héroe seleccionado como entrada -->
